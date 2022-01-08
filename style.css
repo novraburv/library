@@ -1,0 +1,8 @@
+* {
+	outline: 1px dotted red;
+}
+
+.btn-add {
+	display: block;
+	width: 100%;
+}
