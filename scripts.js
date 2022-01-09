@@ -18,6 +18,11 @@ function addBookToLibrary(title, author, pages, read) {
 	updateTable()
 }
 
+function deleteBook() {
+	myLibrary.splice(this.dataset.index, 1);
+	updateTable();
+}
+
 function updateTable() {
 	const tbody = document.querySelector('.table__body');
 	if (tbody.innerHTML) tbody.innerHTML = '';
@@ -38,6 +43,7 @@ function updateTable() {
 		const delButton = document.createElement('button');
 		delButton.classList.add('btn', 'btn-del');
 		delButton.setAttribute('data-index', index);
+		delButton.addEventListener('click', deleteBook)
 		delButton.innerHTML = '<i class="fa fa-trash"></i>';
 		index++;
 		tr.appendChild(delButton);
