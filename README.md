@@ -1,5 +1,5 @@
 # The Odin Project
-# Library
+## Library
 
 Create a library app with the abilities to add, remove, and edit book and its properties.
 
