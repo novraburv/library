@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Library</title>
-	
+
 	<!-- css reset -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+
+	<!-- fonts -->
+	<script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
 
 	<!-- custom styles -->
 	<link rel="stylesheet" href="./style.css">
 
 	<script src="./scripts.js"></script>
 </head>
+
 <body>
 	<header class="header">
 		<h1 class="header__logo">UrLib</h1>
@@ -27,12 +32,13 @@
 				<th>Read</th>
 			</tr>
 			<tr>
-				<td colspan="4"><button class="btn btn-add">Add Book</button></td>
+				<td colspan="4"><button class="btn btn-add"><i class="fa fa-plus-circle"></i></button></td>
 			</tr>
 		</thead>
 		<tbody class="table__body">
-			
+
 		</tbody>
-	</table>	
+	</table>
 </body>
+
 </html>
