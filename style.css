@@ -1,8 +1,75 @@
 * {
-	outline: 1px dotted red;
+/* 	outline: 1px dotted red; */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	
+	padding: 2em;
+}
+
+.header * {
+	margin: 0;
+}
+
+.btn {
+	padding: 0.5em;
 }
 
 .btn-add {
 	display: block;
 	width: 100%;
+}
+
+.table-container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.table {
+	width: 85%;
+	
+	border-collapse: collapse;
+}
+
+.table__head {
+	border-bottom: 3px double black;
+}
+
+.table__head th,
+.table__body td,
+.table__foot td {
+	padding: 1em;
+}
+
+.form-container {	
+	position: absolute;
+	top: 0;
+	
+	display: none;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100vw;
+	height: 100vh;
+	
+	background-color: lightgray;
+}
+
+.form {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1em;
+}
+
+.form label {
+	display: inline-block;
+	width: 100px;
 }
