@@ -40,24 +40,26 @@ function updateTable() {
 		})
 
 		// add delete button at the end
+		const td = document.createElement('td');
 		const delButton = document.createElement('button');
 		delButton.classList.add('btn', 'btn-del');
 		delButton.setAttribute('data-index', index);
 		delButton.addEventListener('click', deleteBook)
 		delButton.innerHTML = '<i class="fa fa-trash"></i>';
 		index++;
-		tr.appendChild(delButton);
+		td.appendChild(delButton);
+		tr.appendChild(td);
 
 		tbody.appendChild(tr);
 	})
 }
 
 function showForm() {
-	form.removeAttribute('hidden');
+	form.style.display = 'flex';
 }
 
 function hideForm() {
-	form.setAttribute('hidden', 'true')
+	form.style.display = 'none';
 }
 
 function submit() {
@@ -75,7 +77,7 @@ function resetForm() {
 
 const btnAdd = document.querySelector('.btn-add');
 const btnSubmit = document.querySelector('.btn-submit');
-const form = document.querySelector('.form');
+const form = document.querySelector('.form-container');
 
 const formTitle = form.querySelector('#title');
 const formAuthor = form.querySelector('#author');
@@ -85,3 +87,6 @@ const formRead = form.querySelector('#read');
 btnAdd.addEventListener('click', showForm);
 
 btnSubmit.addEventListener('click', submit);
+
+// book example
+addBookToLibrary('That Night In Fort Bernaugh', 'Gabriella Augustine', 482, true);
