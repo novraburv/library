@@ -48,6 +48,10 @@
 	padding: 1em;
 }
 
+.table__head th {
+	text-align: left;
+}
+
 .form-container {	
 	position: absolute;
 	top: 0;
