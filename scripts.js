@@ -63,6 +63,10 @@ function hideForm () {
 }
 
 function submit () {
+  if (!validateForm(formTitle, formAuthor)) {
+    showError(formTitle, formAuthor)
+    return
+  }
   addBookToLibrary(formTitle.value, formAuthor.value, formPages.value, formRead.checked)
   resetForm()
   hideForm()
@@ -73,6 +77,14 @@ function resetForm () {
   formAuthor.value = ''
   formPages.value = ''
   formRead.checked = false
+}
+
+function validateForm (...input) {
+  return input.every(element => element.checkValidity())
+}
+
+function showError (...input) {
+  input.forEach(element => element.reportValidity())
 }
 
 const btnAdd = document.querySelector('.btn-add')
